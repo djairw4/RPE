@@ -1,0 +1,7 @@
+<launch>
+<node pkg="product" name="product" type="prod"/>
+<node pkg="cosine" name="cosine" type="cos"/>
+<node pkg="integrator" name="integral" type="integral"/>
+<node pkg="sine" name="sine" type="sin"/>
+<node pkg="gain" name="gain" type="gain"/>
+</launch>

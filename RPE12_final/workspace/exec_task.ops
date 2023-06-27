@@ -1,0 +1,21 @@
+import("oro_mobile_platform")
+import("rtt_rosnode")
+import("rtt_roscomm")
+import("rtt_std_msgs")
+
+loadComponent("t","Generator")
+loadComponent("logger", "Data_logger")
+stream("t.out", ros.comm.topic("time")) 
+stream("logger.x", ros.comm.topic("x"))
+stream("logger.y", ros.comm.topic("y"))
+
+t.configure
+t.start
+logger.start
+while ( t.time < 10 ) {
+}
+t.stop
+logger.stop
+t.cleanup
+logger.cleanup
+
